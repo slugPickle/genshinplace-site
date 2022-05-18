@@ -1,0 +1,195 @@
+/* GenshinPlace Website CSS by LHBread */
+@font-face {
+  font-family: Genshin-font;
+  src: url(fonts/ja-jp.ttf);
+}
+
+/* Scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent1);
+}
+
+/* Theme colors */
+
+:root.green {
+  --base: #558776;
+  --accent1: #EAE2B6;
+  --accent2: #A3A745;
+  --textBase: #000000;
+  --textHighlight: #24221d;
+}
+
+:root.light {
+  --base: #F0E9D2;
+  --accent1: #E6DDC4;
+  --accent2: #678983;
+  --textBase: #000000;
+  --textHighlight: #181D31;
+}
+
+:root.dark {
+  --base: #041C32;
+  --accent1: #04293A;
+  --accent2: #064663;
+  --textBase: #FFFFFF; 
+  --textHighlight: #ECB365;
+}
+
+:root.oled {
+  --base: #000000;
+  --accent1: #07252e;
+  --accent2: #204020;
+  --textBase: #e0e0e0;
+  --textHighlight: #c0c0c0;
+}
+
+/* Begin main page */
+
+html {
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: var(--base);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--textBase); 
+  text-decoration: none;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Heading */
+
+header {
+  display: flex;
+  max-width: 90rem;
+  min-width: 50rem;
+  margin:auto;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header-child-1 {
+  min-height: 15%;
+  min-width: 25%;
+  padding-bottom: 1%;
+  align-items: bottom;
+}
+
+.theme-btn {
+  padding: 0.5em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.header-child-2 {
+  min-height: 15%;
+  min-width: 40%;
+}
+
+.header-child-3 {
+  display: flex; 
+  color: var(--textBase);
+  min-width: 25%;
+  min-height: 30%;
+  padding-bottom: 1%;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.header-child-3 input[type=text] {
+  font-family: Genshin-font;
+  font-size: 120%;
+  color: var(--textBase);
+  min-width: 5rem;
+  max-width:25rem;
+  height: 2rem;
+  background-color: var(--accent1);
+  border: 2px solid;
+  border-radius: 0.5rem;
+  border-color: var(--textHighlight);
+}
+
+/* Body */
+
+.body-parent {
+  font-family: Genshin-font;
+  margin: auto;
+  min-height: 100%;
+  max-width: 90rem;
+  min-width: 50rem;
+  border-radius: 1.5rem;
+  background-color:var(--accent1);
+}
+
+.title {
+    color: var(--textHighlight);
+    padding: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.quick-nav {
+  width: fill;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+.quick-nav-item {
+  height: 8rem;
+  display:flex;
+  font-family: Genshin-font;
+  align-items: center;  
+  color: var(--textHighlight);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;  
+}
+
+.quick-nav-item-image {
+  height: 100%;
+  width: fit-content;
+}
+
+.quick-nav-item-text {
+  height: 5rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  border-left: solid black 2px;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+  footer {
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
