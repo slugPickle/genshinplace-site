@@ -1,7 +1,7 @@
 /* GenshinPlace Website CSS by LHBread */
 @font-face {
     font-family: Genshin-font;
-    src: url(fonts/ja-jp.ttf);
+    src: url(../fonts/ja-jp.ttf);
   }
   
   /* Scroll bar */
@@ -76,6 +76,10 @@
     width: 100%;
     object-fit: contain;
   }
+
+  p {
+      color: var(--textBase);
+  }
   
   /* Heading */
   
@@ -145,44 +149,124 @@
   }
 
   .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: var(--textHighlight);
     padding: 2rem;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.25rem;
     background-color: var(--accent2);
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, .125);
 }
 
-ol {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+ul {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-left: 2px solid var(--textBase);
+}
+
+.thread-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .thread-title {
-    padding: n0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    color: var(--textBase);
+    margin: 0px;
+    width: fit-content;
+    border-bottom: 2px solid transparent;
 }
 
-.bottom {
+.thread-title:hover {
+    color: var(--textHighlight);
+    border-bottom: 2px solid var(--textHighlight)
+}
+
+.thread-metadata {
     display: flex;
-
+    margin: 0px;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
 }
 
-.timestamp {
-    font-size:1rem;
-    padding-right: 0.5rem;
+.thread-page-title {
+    color: var(--textBase);
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
+    margin: 0px;
+    width: fit-content;
+    border-bottom: 2px solid transparent;
 }
 
-.comment-count {
-    font-size: 1rem;
+.thread-content {
+    padding-top: 2rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
 }
 
+.thread-text {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
 
+textarea {
+    font-family: Genshin-font;
+    font-size: 120%;
+    color: var(--textBase);
+    width: 100%;
+    min-height: 5rem;
+    background-color: var(--accent1);
+    border: 2px solid;
+    border-radius: 0.5rem;
+    border-color: var(--textHighlight);
+    max-height: none;
+    resize: none;
+    overflow: auto;
+}
+
+textarea:active {
+    border-color: var(--textHighlight);
+}
+
+.comment-button {
+    font-family: Genshin-font;
+    color: var(--textHighlight);
+    font-size: 1.5rem;
+    border: 2px solid var(--textHighlight);
+    border-radius: 0.5rem;
+    background-color: var(--accent1);
+    float: right;
+}
+
+.comment-button:hover {
+    background-color: var(--accent2);
+}
+
+.metadata {
+  font-size: .75rem;
+  color: var(--textHighlight);
+  margin-left: 0.75rem;
+}
+
+div[contenteditable] {
+  font-family: Genshin-font;
+  font-size: 120%;
+  color: var(--textBase);
+  width: 100%;
+  min-height: 5rem;
+  background-color: var(--accent1);
+  border: 2px solid;
+  border-radius: 0.5rem;
+  border-color: var(--textHighlight);
+  max-height: none;
+  resize: none;
+  overflow: auto;
+}
 
 footer {
     display: flex;
