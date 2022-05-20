@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="green">
+ <header>
+   <link rel="stylesheet" href="forum-style.css">
+      <div class="header-child-1">
+        <button id="theme" class="theme-btn green" onclick="setTheme('green');setLogoGreen()" title="Sumeru">
+        </button>
+        <button id="theme" class="theme-btn light" onclick="setTheme('light');setLogoBlack()" title="Light">
+        </button>
+        <button id="theme" class="theme-btn dark" onclick="setTheme('dark');setLogoGold()" title="Dark">
+        </button>
+        <button id="theme" class="theme-btn oled" onclick="setTheme('oled');setLogoWhite()" title="Oled">
+        </button>
+      </div>
+      <div class="header-child-2"> 
+        <a href="../index.html">
+          <img id="logo" src="../images/logo-green.svg">
+        </a>
+      </div>
+      <div class="header-child-3">
+        <input type="text" name="search" placeholder="Search">
+      </div>
+ </header>
+ <body>
+  <div class="body-parent">
+<!-- PAGE CONTENT -->
+    <div class="title">
+      <h1>Genshinplace Forum</h1>
+      <a class="create-thread" href="create-thread.html">
+        <button class="comment-button">Create Thread</button> 
+      </a>
+    </div>
+    <ul>
+    </ul>
+<!-- END PAGE CONTENT -->
+  </div>
+ </body>
+ <footer>
+   <img id="foot-logo" src="../images/foot-logo-green.svg">
+ </footer>
+<!-- SCRIPTS-->
+ <script src="../scripts/script.js" type="text/javascript"></script>
+ <script src="data.js" type="text/javascript"></script>
+ <!--IMPORT SCRIPT DATA AS HTML-->
+ <script>
+    console.log(threads);
+    var container = document.querySelector('ul');
+    for (let thread of threads) {
+      var html = `
+        <a href="./thread.html?${thread.id}">
+          <div class=thread-container>
+            <h2 class=thread-title>
+              ${thread.title}
+            </h2>
+            <div class="thread-metadata">
+                ${thread.author}
+              <p class="metadata">
+                ${new Date(thread.date).toLocaleString()}
+              </p>
+              <p class="metadata">
+                ${thread.comments.length} comments
+              </p>
+              </div>
+          </div>
+        </a>
+      `
+      container.insertAdjacentHTML('beforeend', html);
+      }
+      </script>
